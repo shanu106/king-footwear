@@ -14,6 +14,7 @@ const Login = () => {
   const url = import.meta.env.VITE_BACKEND_URL
 
   const handleLogin = async (e) => {
+    console.log("url : ",url);
     e.preventDefault()
     setError('')
     setLoading(true)
