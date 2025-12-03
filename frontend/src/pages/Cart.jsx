@@ -359,10 +359,10 @@ const Cart = () => {
         setIsProcessing(false)
         return
       }
-
+      const key = import.meta.env.VITE_RAZORPAY_KEY_ID;
       // Step 2: Open Razorpay checkout
       const options = {
-        key: import.meta.env.RAZORPAY_KEY_ID, // Replace with your actual Razorpay key_id
+        key: key, // Replace with your actual Razorpay key_id
         amount: order.amount,
         currency: order.currency,
         name: 'King Footwear',
