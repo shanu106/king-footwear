@@ -1,0 +1,5 @@
+window.RUNTIME_CONFIG = {
+  VITE_BACKEND_URL: "",
+  DELHIVERY_API_KEY: "",
+  VITE_RAZORPAY_KEY_ID: ""
+};
