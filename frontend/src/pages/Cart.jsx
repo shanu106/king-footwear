@@ -20,7 +20,8 @@ const Cart = () => {
   const [isProcessing, setIsProcessing] = useState(false)
   const [notification, setNotification] = useState(null) // {type: 'error'|'success', message: string}
   const [invalidPincode, setInvalidPincode] = useState(false) // Track invalid pincode
-  const url = import.meta.env.VITE_BACKEND_URL
+  const url = window.RUNTIME_CONFIG.VITE_BACKEND_URL;
+  // const url = import.meta.env.VITE_BACKEND_URL
   const [addressForm, setAddressForm] = useState({
     fullName: '',
     phone: '',
@@ -359,7 +360,7 @@ const Cart = () => {
         setIsProcessing(false)
         return
       }
-      const key = import.meta.env.VITE_RAZORPAY_KEY_ID;
+      const key = window.RUNTIME_CONFIG.VITE_RAZORPAY_KEY_ID;
       // Step 2: Open Razorpay checkout
       const options = {
         key: key, // Replace with your actual Razorpay key_id

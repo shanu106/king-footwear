@@ -14,7 +14,8 @@ const Signup = () => {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
   const { login } = useAuth()
-  const url = import.meta.env.VITE_BACKEND_URL
+  const url = window.RUNTIME_CONFIG.VITE_BACKEND_URL;
+  // const url = import.meta.env.VITE_BACKEND_URL
 
   const handleSignup = async (e) => {
     e.preventDefault()

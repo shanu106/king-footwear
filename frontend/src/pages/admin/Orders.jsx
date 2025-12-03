@@ -10,7 +10,8 @@ const Orders = () => {
   const [updateModal, setUpdateModal] = useState(null)
   const [selectedStatus, setSelectedStatus] = useState('')
   const [updating, setUpdating] = useState(false)
-  const url = import.meta.env.VITE_BACKEND_URL
+  const url = window.RUNTIME_CONFIG.VITE_BACKEND_URL;
+  // const url = import.meta.env.VITE_BACKEND_URL
 
   useEffect(() => {
     fetchOrders()

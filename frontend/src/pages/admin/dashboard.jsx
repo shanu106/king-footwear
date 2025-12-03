@@ -13,7 +13,8 @@ const Dashboard = () => {
     totalRevenue: 0,
   })
   const [loading, setLoading] = useState(true)
-  const url = import.meta.env.VITE_BACKEND_URL
+  const url = window.RUNTIME_CONFIG.VITE_BACKEND_URL;
+  // const url = import.meta.env.VITE_BACKEND_URL
 
   useEffect(() => {
     const fetchStats = async () => {

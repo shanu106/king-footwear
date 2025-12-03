@@ -9,7 +9,8 @@ import Footer from "../components/Footer";
 const Home = () => {
   const [query, setQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
-  const url = import.meta.env.VITE_BACKEND_URL;
+  const url = window.RUNTIME_CONFIG.VITE_BACKEND_URL;
+  // const url = import.meta.env.VITE_BACKEND_URL;
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
   const { isAuth, addToCart } = useAuth();

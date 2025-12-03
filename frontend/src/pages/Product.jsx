@@ -15,7 +15,8 @@ const Product = () => {
   const [product, setProduct] = useState(location.state?.product || null)
   const [relatedProducts, setRelatedProducts] = useState([])
   const [toastMessage, setToastMessage] = useState('')
-  const url = import.meta.env.VITE_BACKEND_URL
+  const url = window.RUNTIME_CONFIG.VITE_BACKEND_URL;
+  // const url = import.meta.env.VITE_BACKEND_URL
 
   // Common shoe sizes
   const shoeSizes = [ '6',  '7',  '8',  '9',  '10',]

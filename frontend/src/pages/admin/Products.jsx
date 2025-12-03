@@ -24,7 +24,8 @@ const Products = () => {
     sizes: [7, 8, 9, 10],
     quantities: [0, 0, 0, 0]
   })
-  const url = import.meta.env.VITE_BACKEND_URL
+  const url = window.RUNTIME_CONFIG.VITE_BACKEND_URL;
+  // const url = import.meta.env.VITE_BACKEND_URL
 
   useEffect(() => {
     const fetchProducts = async () => {
