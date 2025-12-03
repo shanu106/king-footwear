@@ -362,7 +362,7 @@ const Cart = () => {
 
       // Step 2: Open Razorpay checkout
       const options = {
-        key: 'rzp_test_Rm4VMEYCeVcqYF', // Replace with your actual Razorpay key_id
+        key: import.meta.env.RAZORPAY_KEY_ID, // Replace with your actual Razorpay key_id
         amount: order.amount,
         currency: order.currency,
         name: 'King Footwear',
