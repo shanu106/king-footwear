@@ -9,8 +9,18 @@ app.use(cookieParser());
 
 
 // Middleware
+const allowedOrigins = [
+  "https://sandalista-864466213133.us-central1.run.app",
+  "http://localhost:5173"
+];
 const corsOptions = {
-    origin: (origin, callback) => callback(null, origin || true), // reflect request origin
+    origin: (origin, callback) => {
+       if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, origin || true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true, // allow cookies/authorization headers
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
