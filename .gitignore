@@ -1,0 +1,6 @@
+**/node_modules
+**/.env
+**/gmail.json
+**/test.js
+**/test1.js
+**/test2.js
