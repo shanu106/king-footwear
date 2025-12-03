@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const Razorpay = require('razorpay');
 const bodyParser = require('body-parser');
 const {config} = require('dotenv');
-const addressModel = require('../models/Address.model.js');
+const addressModel = require('../models/address.model.js');
 config({path:"./.env"})
 //  const instance = new Razorpay({
 //     key_id: process.env.RAZORPAY_KEY_ID,
