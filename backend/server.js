@@ -10,6 +10,7 @@ app.use(cookieParser());
 
 // Middleware
 const allowedOrigins = [
+    "*",
   "https://sandalista-864466213133.us-central1.run.app",
   "http://localhost:5173"
 ];
