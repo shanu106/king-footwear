@@ -5,6 +5,7 @@ const isLoggedin = require('../middlewares/isLoggedin');
 
 // POST /check-pincode
 router.post('/check-pincode', isLoggedin, async (req, res) => {
+  console.log('Received pincode check request:', req.body)
   try {
     const { pincode } = req.body
     
