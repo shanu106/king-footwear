@@ -21,7 +21,7 @@ module.exports = async function (req, res, next) {
     next();
                 
  } catch (err){
-   
+   console.log("error in isLoggedin middleware", err);
     res.redirect('/');
  }
 }
