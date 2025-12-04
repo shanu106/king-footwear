@@ -5,7 +5,7 @@ const userModel = require('../models/User.model');
 module.exports = async function (req, res, next) {
 
    
-   console.log(req)
+   console.log("is logged in  req ",req)
     const token = req.headers.Authorization? req.headers.Authorization.split(' ')[1]: req.cookies.token;
  if (!token) {
    console.log("no token");
