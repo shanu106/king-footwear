@@ -15,7 +15,11 @@ app.use(cors({
   allowedHeaders: "Content-Type,Authorization"
 }));
 app.use(cors({
-  origin: "https://sandalista-864466213133.us-central1.run.app/",
+  origin: [
+    "https://sandalista-864466213133.us-central1.run.app",
+    "https://king-footwears-864466213133.us-central1.run.app",
+    "http://localhost:5173"
+  ],
   credentials: true
 }));
 
