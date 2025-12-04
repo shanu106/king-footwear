@@ -54,8 +54,16 @@ router.post('/login', async (req, res)=>{
         
         bcrypt.compare(password, owner.password, (err, result)=>{
             if(result){
+                const token = tokenAdmin(owner);
+
+                   res.cookie("token",token, {
+        httpOnly: true,
+        secure:true,
+        sameSite:'None',
+        path:'/'
+    });
                 
-                res.cookie("token",tokenAdmin(owner));
+               
                 // res.cookie("token",token);
     // res.render('shop', {products, added,user})
    res.json(owner);
