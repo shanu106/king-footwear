@@ -9,11 +9,7 @@ app.use(cookieParser());
 
 
 // Middleware
-app.use(cors({
-  origin: "*",      // Allow all origins
-  methods: "GET,POST,PUT,DELETE",
-  allowedHeaders: "Content-Type,Authorization"
-}));
+
 app.use(cors({
   origin: [
     "https://sandalista-864466213133.us-central1.run.app",
