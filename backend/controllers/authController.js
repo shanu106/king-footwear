@@ -69,7 +69,12 @@ else {
         if(result) {
             let products = await productModel.find();
             const token = generateToken(user);
-    res.cookie("token",token);
+    res.cookie("token",token, {
+        httpOnly: true,
+        secure:true,
+        sameSite:'None',
+        path:'/'
+    });
     // res.render('shop', {products, added,user})
    res.json({user,token});
         
